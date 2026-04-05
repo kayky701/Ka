@@ -66,6 +66,7 @@ h1 {
     <h1>💖 Quer namorar comigo? 💖</h1>
     <button id="sim" onclick="aceitou()">SIM ❤️</button>
     <button id="nao">NÃO 😢</button>
+    <img id="foto" src="SUA-FOTO.jpg" class="hidden" style="width:250px; border-radius:15px; margin-top:15px;">
 </div>
 
 <audio id="musica" loop>
@@ -100,7 +101,10 @@ document.addEventListener("mousemove", function(e) {
 });
 
 function aceitou() {
-    document.body.innerHTML = "<h1>AGORA ESTAMOS OFICIALMENTE NAMORANDO 💖🥰</h1>";
+    document.getElementById("pedido").innerHTML = `
+        <h1>AGORA ESTAMOS OFICIALMENTE NAMORANDO 💖🥰</h1>
+        <img src="SUA-FOTO.jpg" style="width:250px; border-radius:15px; margin-top:15px;">
+    `;
 
     setInterval(() => {
         let coracao = document.createElement("div");
@@ -123,7 +127,3 @@ function aceitou() {
 
     }, 200);
 }
-</script>
-
-</body>
-</html>
